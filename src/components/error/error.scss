@@ -1,0 +1,13 @@
+.error {
+    width: 60%;
+    margin: 20px auto;
+    padding: 5px;
+    &_text {
+        font-size: 22px;
+        color: white;
+    }
+    &_img {
+        border-radius: 10px;
+        margin: 15px;
+    }
+}

@@ -1,0 +1,97 @@
+.cart {
+    padding-top: 120px;
+    padding-bottom: 50px;
+    min-height: 100vh;
+    &__title {
+        font-size: 36px;
+        color: #fff;
+        text-align: center;
+        font-weight: 300;
+    }
+    &__list {
+        width: 60%;
+        margin: 0 auto;
+    }
+    &__to_order {
+        width: 100px;
+        margin: 10px auto;
+        color: white;
+        font-size: 26px;
+        cursor: pointer;
+        padding: 5px;
+        text-align: center;
+        background-color: rgba(22, 21, 21, 0.336);
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(256,256,256, .1);
+    }
+    &__message {
+        width: 30%;
+        padding: 5px;
+        color: white;
+        font-size: 26px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    &__item {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+        border: 1px solid rgba(256,256,256, .2);
+        background-color: rgba(0,0,0,.7);
+        box-shadow: 0 0 20px rgba(256,256,256, .1);
+        &-title, &-price  {
+            width: 250px;
+            text-align: center;
+            color: #fff;
+            font-size: 24px;
+        }
+        &-img {
+            height: 125px;
+            width: 250px;
+            object-fit: cover;
+        }
+        &-container-quantity {
+            width: 100px;
+        }
+        &-quantity {
+            display: inline-block;
+            width: auto;
+            color: white;
+            margin: 0 10px;
+            font-size: 24px;
+        }
+        &-counter {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+        }
+        &-totalsum {
+            width: auto;
+            color: white;
+            font-size: 24px;
+            margin: 0 20px;
+            text-align: center;
+        }
+
+    }
+    &__close {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        top: -10px;
+        right: -10px;
+        color: #fff;
+        font-size: 20px;
+        border-radius: 100%;
+        border: 1px solid #fff;
+        cursor: pointer;
+    }
+}
