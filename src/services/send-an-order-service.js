@@ -6,13 +6,11 @@ export default class AddOrder {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
-                },
+            },
             body: JSON.stringify(Object.fromEntries(data.entries()))
         });
 
-        if (!res.ok){
-            throw new Error('Server Error');
-        }
+        if (!res.ok) throw new Error(`Server Error: ${res.status}`);
 
         return res;
     }
