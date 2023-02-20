@@ -1,4 +1,8 @@
 .menu {
+    &_container {
+        width: 100%;
+        height: 99vh;
+    }
     &_item {
         width: 60%;
         background-color: #fff;
