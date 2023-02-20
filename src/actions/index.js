@@ -1,67 +1,37 @@
-const menuLoaded = (newMenu) => {
-    return {
-        type: 'MENU_LOADED',
-        payload: newMenu
-    } 
-};
+const menuLoaded = (newMenu) => ({
+    type: 'MENU_LOADED',
+    payload: newMenu
+});
 
-const menuRequested = () => {
-    return {
-        type: 'MENU_REQUESTED'
-    } 
-};
+const menuRequested = () => ({ type: 'MENU_REQUESTED' });
 
-const isError = () => {
-    return {
-        type: 'ERROR'
-    } 
-};
+const isError = () => ({ type: 'ERROR' });
 
-const itemAddToCart = (id) => {
-    return {
-        type: 'ITEM_ADD_TO_CART',
-        payload: id
-    } 
-};
+const itemAddToCart = (id) => ({
+    type: 'ITEM_ADD_TO_CART',
+    payload: id
+});
 
-const itemDeleteFromCart = (id) => {
-    return {
-        type: 'ITEM_REMOVE_FROM_CART',
-        payload: id
-    } 
-};
+const itemDeleteFromCart = (id) => ({
+    type: 'ITEM_REMOVE_FROM_CART',
+    payload: id
+});
 
-const clearCart = () => {
-    return {
-        type: 'CLEAR_CART'
-    }
-};
+const clearCart = () => ({ type: 'CLEAR_CART' });
 
-const isOrderAdded = () => {
-    return {
-        type: 'ORDER_ADDED'
-    }
-};
+const isOrderAdded = () => ({ type: 'ORDER_ADDED' });
 
-const clearOrderAdded = () => {
-    return {
-        type: 'ORDER_NOT_ADDED'
-    }
-};
+const clearOrderAdded = () => ({ type: 'ORDER_NOT_ADDED' });
 
-const quantityPlus = (id) => {
-    return {
-        type: 'QUANTITY_PLUS',
-        payload: id
-    }
-};
+const quantityPlus = (id) => ({
+    type: 'QUANTITY_PLUS',
+    payload: id
+});
 
-const quantityMinus = (id) => {
-    return {
-        type: 'QUANTITY_MINUS',
-        payload: id
-    }
-}
+const quantityMinus = (id) => ({
+    type: 'QUANTITY_MINUS',
+    payload: id
+});
 
 export {
     menuLoaded,
