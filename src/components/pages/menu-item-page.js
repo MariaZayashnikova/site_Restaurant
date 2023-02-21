@@ -26,6 +26,7 @@ class MenuItem extends Component {
         let id = +this.props.match.params.id;
 
         let item = menuItems.find(item => id === +item.id);
+        if (!item) return <Error />;
         let { title, price, url, category } = item;
 
         return (
