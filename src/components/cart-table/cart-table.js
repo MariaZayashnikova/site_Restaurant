@@ -39,7 +39,7 @@ const CartTable = ({ itemsCart, itemDeleteFromCart, clearCart, orderAdded, isOrd
 
     return (
         <div>
-            <div className="cart__title">Ваш заказ:</div>
+            <div className="cart__title">Your order:</div>
             <div className="cart__list">
                 {
                     itemsCart.map(item => {
