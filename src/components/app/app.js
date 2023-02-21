@@ -1,31 +1,34 @@
 import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import { connect } from 'react-redux';
 import MainPage from '../pages/main-page';
 import CartPage from '../pages/cart-page'
 import AppHeader from '../app-header/app-header';
-import './app.scss';
-import {Route} from 'react-router-dom';
 import MenuItem from '../pages/menu-item-page';
-import {connect} from 'react-redux'; 
+import Error from '../error/error';
+import './app.scss';
 
-const App = ({itemsCart}) => {
+const App = ({ itemsCart }) => {
     let sum = 0;
-    itemsCart.map(item => {
-        let totalSum = +item.price * +item.quantity;
-        sum += totalSum;
+    itemsCart.forEach(item => {
+        sum += +item.price * +item.quantity;
     });
 
     return (
         <div className="app">
-            <AppHeader total={sum}/>
-            <Route path='/' exact component={MainPage}/>
-            <Route path='/menu' exact component={MainPage} />
-            <Route path='/cart' exact component={CartPage} />
-            <Route path='/menu/:id' exact component={MenuItem}/>
+            <AppHeader total={sum} />
+            <Switch>
+                <Route path='/' exact component={MainPage} />
+                <Route path='/menu' exact component={MainPage} />
+                <Route path='/cart' exact component={CartPage} />
+                <Route path='/menu/:id' exact component={MenuItem} />
+                <Route component={Error} />
+            </Switch>
         </div>
     )
 }
 
-const mapStateToProps = ({itemsCart}) => {
+const mapStateToProps = ({ itemsCart }) => {
     return {
         itemsCart
     }

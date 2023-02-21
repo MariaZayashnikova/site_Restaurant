@@ -1,9 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import cartIcon from './shopping-cart-solid.svg';
 import './app-header.scss';
-import {Link} from 'react-router-dom';
 
-const AppHeader = ({total}) => {
+const AppHeader = ({ total }) => {
     return (
         <header className="header">
             <Link to='/menu' className="header__link">
